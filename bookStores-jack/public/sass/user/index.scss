@@ -1,0 +1,499 @@
+@import "../common/common.scss";
+@import "./_head.scss";
+@import "./bookLRStyle.scss";
+div.wrap {
+	display: flex;
+	flex-direction: column;
+}
+
+div.swiper-container {
+	@include num(100%, 100%);
+	overflow: hidden;
+	div.swiper-wrapper {
+		div.swiper-slide {
+			@include num(100%, 100%);
+			&#book_city {
+				>ul {
+					width: 100%;
+					&::after {
+						content: attr(data-up);
+						display: block;
+						position: absolute;
+						bottom: pxTorem(-44px);
+						left: 0;
+						@include num(100%, pxTorem(44px));
+						background: #fcc;
+						text-align: center;
+						line-height: pxTorem(44px);
+					}
+					&::before {
+						content: attr(data-down);
+						display: block;
+						position: absolute;
+						top: pxTorem(-44px);
+						left: 0;
+						@include num(100%, pxTorem(44px));
+						background: #fcc;
+						text-align: center;
+						line-height: pxTorem(44px);
+					}
+					/*li的公共样式*/
+					li.Secblock {
+						section.block {
+							border-top: pxTorem(10px) solid $search-border;
+							background: #fff;
+							position: relative;
+							div.con_tag {
+								border-top: pxTorem(1px) solid #f0f0f0;
+								overflow: hidden;
+								line-height: pxTorem(22px);
+								a {
+									border-right: 1px solid #f0f0f0;
+									float: left;
+									width: 50%;
+									padding: pxTorem(14px);
+									font-size: pxTorem(13px);
+									color: rgba(0, 0, 0, 0.9);
+									box-sizing: border-box;
+									text-align: center;
+								}
+							}
+							
+						}
+					}
+					li.con_top {
+						@include num(100%, auto);
+						div.con_top_search {
+							padding: pxTorem(5px) pxTorem(10px) 0;
+							position: relative;
+							a.con_top_search_left {
+								display: block;
+								margin: pxTorem(7px) pxTorem(8px);
+								padding: pxTorem(1px) 0 0 pxTorem(30px);
+								color: rgba(0, 0, 0, 0.4);
+								background: url("../../images/icon-search.png") no-repeat pxTorem(8px) center;
+								background-size: pxTorem(14px);
+								border: pxTorem(1px) solid $search-border;
+								border-radius: pxTorem(2px);
+								line-height: pxTorem(36px);
+							}
+						}
+					}
+					li.city_banner {
+						@include num(100%,auto);
+						div.swiper-wrapper {
+							@include num(100%,
+							100%);
+							img {
+								display: block;
+								@include num(100%,
+								auto);
+							}
+						}
+					}
+					li.con_nav {
+						margin: pxTorem(14px) 0 pxTorem(4px);
+						display: flex;
+						@include num(100%,
+						pxTorem(50px));
+						dl {
+							flex: 1;
+							height: auto;
+							dt {
+								img {
+									display: block;
+									margin: 0 auto;
+									@include num(pxTorem(22px),
+									pxTorem(22px));
+									background-position: center;
+									background-repeat: no-repeat;
+									background-size: 22px;
+								}
+							}
+							dd {
+								line-height: pxTorem(35px);
+								text-align: center;
+							}
+						}
+					}
+					li.sec {
+						@include num(100%,
+						pxTorem(442px));
+						section.block {
+							div.block_title {
+								position: relative;
+								padding: pxTorem(10px) pxTorem(14px);
+								border-bottom: pxTorem(1px) solid $line-border;
+								border-left: pxTorem(6px) solid $line-orange;
+								line-height: pxTorem(25px);
+								h2 {
+									text-align: left;
+									font-size: pxTorem(16px);
+									font-weight: normal;
+									color: $black-color;
+								}
+							}
+							div.block_content {
+								width: 100%;
+								display: flex;
+								flex-wrap: wrap;
+								dl {
+									@include num(33%,
+									pxTorem(139px));
+									margin: pxTorem(10px) 0 pxTorem(15px);
+									dt {
+										@include num(100%,
+										pxTorem(114px));
+										margin: 0 0 pxTorem(4px) 0;
+										img {
+											@include num(auto,
+											100%);
+											display: block;
+											margin: 0 auto;
+										}
+									}
+									dd {
+										line-height: 1.4em;
+										text-align: center;
+										font-size: pxTorem($fz14);
+										color: #8d8d8d;
+									}
+								}
+							}
+							a {
+								display: block;
+								border-top: pxTorem(1px) solid $line-border;
+								text-align: center;
+								font-size: pxTorem(14px);
+								padding: pxTorem(10px) 0;
+								line-height: pxTorem(25px);
+								color: #333;
+								text-decoration: none;
+							}
+						}
+					}
+					li.con_recommend {
+						@include num(100%,
+						pxTorem(470px));
+						section.block {
+							div.con_recommend_title {
+								padding: pxTorem(10px) pxTorem(13px) pxTorem(14px) pxTorem(10px);
+								border-bottom: pxTorem(1px) solid $line-border;
+								position: relative;
+								line-height: pxTorem(20px);
+								p.con_recommend_title_left {
+									position: relative;
+									color: rgba(0, 0, 0, 0.9);
+									text-align: left;
+									i {
+										position: absolute;
+										margin: pxTorem(3px) 0 0 pxTorem(5px);
+										padding: pxTorem(3px) pxTorem(5px) 0 pxTorem(5px);
+										color: #fff;
+										background: $green-color;
+										border-radius: pxTorem(1px);
+										line-height: pxTorem(14px);
+									}
+								}
+								div.con_recommend_title_tab {
+									position: absolute;
+									top: pxTorem(13px);
+									right: pxTorem(13px);
+									a {
+										position: relative;
+										padding: pxTorem(16px) pxTorem(7px);
+										color: #999;
+										&:nth-child(1) {
+											color: #528ae8 !important;
+											&::after {
+												content: '';
+												position: absolute;
+												top: pxTorem(16px);
+												bottom: pxTorem(16px);
+												right: 0;
+												width: pxTorem(1px);
+												border-right: solid pxTorem(1px) #ccc;
+											}
+										}
+									}
+								}
+							}
+							div.con_recommend_content {
+								div.con {
+									ol.con_recommend_content_list {
+										padding: 0 pxTorem(13px);
+										margin: 0 auto;
+										li#con_recommend_content_list_first_item {
+											padding: 0;
+											border: none;
+										}
+										li {
+											padding: pxTorem(10px) 0;
+											border-bottom: 1px solid #f0f0f0;
+											height: auto;
+											.book-h5 {
+												height: pxTorem(35px);
+												line-height: pxTorem(35px);
+												.book-h5_no-img__order {
+													float: left;
+													margin-top: pxTorem(1px);
+													font-size: pxTorem(13px);
+													color: rgba(237, 83, 15, 0.9);
+												}
+												.book-h5_no-img__info {
+													margin-left: pxTorem(27px);
+													.book-h5_no-img__title {
+														position: relative;
+														font-size: pxTorem(15px);
+														color: rgba(0, 0, 0, 0.9);
+														background: #fff;
+														.book-h5_no-img__author {
+															position: absolute;
+															margin: pxTorem(1px) 0 0 pxTorem(13px);
+															font-size: pxTorem(12px);
+															color: rgba(0, 0, 0, 0.4);
+															background: #fff;
+															.book-h5_no-img__author {
+																color: rgba(0, 0, 0, 0.4);
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					li.classify {
+						@include num(100%,
+						auto);
+						section.block {
+							div.con_classify_title {
+								padding: pxTorem(15px) pxTorem(13px) pxTorem(14px) pxTorem(13px);
+								border-bottom: pxTorem(1px) solid #f0f0f0;
+								position: relative;
+								p {
+									position: relative;
+									font-size: pxTorem(13px);
+									color: rgba(0, 0, 0, 0.9);
+									text-align: left;
+									line-height: pxTorem(24px);
+								}
+							}
+						}
+					}
+					li.loadMore {
+						height: auto;
+						ol.con_loadMore_list_render {
+							border-top: pxTorem(10px) solid $search-border;
+							background: #fff;
+							li {
+								padding: pxTorem(15px) 0;
+								border-bottom: pxTorem(1px) solid $line-border;
+								height: auto;
+								dl {
+									@include num(100%,
+									auto);
+									display: flex;
+									dt {
+										flex: 3;
+										img {
+											@include num(pxTorem(85px),
+											pxTorem(113px));
+											display: block;
+										}
+									}
+									dd {
+										flex: 7;
+										.book-h5__title {
+											margin-bottom: pxTorem(4px);
+											font-size: pxTorem(16px);
+											color: rgba(0, 0, 0, 0.9);
+											overflow: hidden;
+											text-overflow: ellipsis;
+											white-space: nowrap;
+											line-height: pxTorem(20px);
+										}
+										.book-h5__author {
+											margin-top: pxTorem(8px);
+											font-size: pxTorem(12px);
+											color: rgba(0, 0, 0, 0.7);
+											overflow: hidden;
+											text-overflow: ellipsis;
+											white-space: nowrap;
+											line-height: pxTorem(14px);
+										}
+										.book-h5__summary {
+											display: -webkit-box;
+											margin: pxTorem(8px) 0 0;
+											height: 2.8em;
+											font-size: pxTorem(12px);
+											color: rgba(0, 0, 0, 0.6);
+											overflow: hidden;
+											text-overflow: ellipsis;
+											line-clamp: 2;
+											box-orient: vertical;
+											line-height: pxTorem(16px);
+										}
+										.book-h5__wrap {
+											margin-top: pxTorem(10px);
+											padding-top: pxTorem(3px);
+											overflow: hidden;
+											line-height: pxTorem(20px);
+											.book-h5__tag {
+												float: left;
+												margin: pxTorem(-3px) pxTorem(7px) 0 0;
+												padding: pxTorem(3px) pxTorem(6px) pxTorem(2px);
+												max-width: 6em;
+												font-size: pxTorem(11px);
+												color: #53ac7d;
+												border-radius: pxTorem(3px);
+												border: 1px solid #53ac7d;
+												overflow: hidden;
+												text-overflow: ellipsis;
+												white-space: nowrap;
+												line-height: pxTorem(20px);
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			&#book_rack {
+				overflow-y: scroll;
+				>div.book_rack_header {
+					@include num(100%,
+					auto);
+					>div.con_top {
+						@include num(100%,
+						auto);
+						div.con_top_search {
+							a.con_top_search_right {
+								display: block;
+								margin: pxTorem(15px) pxTorem(66px) 0 pxTorem(30px);
+								font-size: pxTorem(12px);
+								color: #ccc;
+								border: 1px solid $border-color;
+								border-radius: pxTorem(4px);
+								line-height: pxTorem(36px);
+								background: url("../../images/icon-search.png") no-repeat pxTorem(10px) center;
+								background-size: pxTorem(14px);
+								padding-left: pxTorem(42px);
+							}
+							div.con_top_search_switch_lr{
+								width: pxTorem(36px);
+								height: pxTorem(36px);
+								float: right;
+								border-radius: pxTorem(4px);
+								background: url("../../images/icon-swicth-list.png") no-repeat center;
+								background-size: pxTorem(16px);
+								border: 1px solid $border-color;
+								position: absolute;
+								right: pxTorem(10px);
+								top: pxTorem(15px);
+							}
+							div.con_top_search_switch_tb {
+								width: pxTorem(36px);
+								height: pxTorem(36px);
+								float: right;
+								border-radius: pxTorem(4px);
+								background: url("../../images/icon-switch.png") no-repeat center;
+								background-size: pxTorem(16px);
+								border: 1px solid $border-color;
+								position: absolute;
+								right: pxTorem(10px);
+								top: pxTorem(15px);
+							}
+						}
+					}
+				}
+				>ul.book_rack_con_list_render {
+					@include num(100%,
+					auto);
+					margin-top: pxTorem(10px);
+					li {
+						height: auto;
+						position: relative;
+						overflow: hidden;
+						border-bottom: pxTorem( 1px) solid #f0f0f0;
+						div.u-book {
+							padding: pxTorem(13px) pxTorem(20px);
+							display: flex;
+							div.book-cover {
+								flex:3;
+								img {
+									display: block;
+									@include num(pxTorem(85px),pxTorem(115px));
+									margin: 0 auto;
+								}
+							}
+							div.info {
+								flex: 7;
+								.extra {
+									margin-top: pxTorem(8px);
+									font-size: pxTorem(12px);
+									color: #8d8d8d;
+								}
+								h3.title {
+									margin-bottom: pxTorem(4px);
+									font-size: pxTorem(16px);
+									font-weight: bolder;
+									color: #000;
+									white-space: 0.5em;
+								}
+								p.author {
+									color: #666;
+									margin-top: pxTorem(4px);
+									font-size: pxTorem(14px);
+									span.author {
+										color: #666;
+									}
+								}
+							}
+						}
+					}
+					li.book_rack_tp_list{
+						@include num(30%,auto);
+						display: inline-block;
+						margin: pxTorem(10px) 1%;
+						div.u-book{
+							display: block;
+							padding: 0;
+							margin: 0;
+							div.book-cover{
+								img{
+									display: block;
+									@include num(pxTorem(85px), pxTorem(115px));
+									margin: 0 auto;
+								}
+							}
+							div.info{
+								width: 100%;
+								h3.title{
+									width: 100%;
+									text-align: center;
+									margin-bottom: pxTorem(4px);
+									font-size: pxTorem(13px);
+									font-weight: 600;
+									color: #000;
+									line-height: pxTorem(25px);
+									overflow: hidden;
+									text-overflow:ellipsis;
+									white-space: nowrap;
+								}
+								p.author,p.extra,div.wrap{
+									display: none;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

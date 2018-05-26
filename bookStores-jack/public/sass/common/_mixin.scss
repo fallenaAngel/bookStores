@@ -1,0 +1,61 @@
+@mixin wh($w:100%, $h:100%) {
+    width: $w;
+    height: $h;
+}
+
+@mixin sizing {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/*超过几行显示省略号*/
+
+@mixin one-line {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin line($num) {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: $num;
+    -webkit-box-orient: vertical;
+}
+
+
+/*背景*/
+
+@mixin bg($img, $l:center) {
+    background: url($img) no-repeat $l center;
+}
+
+
+/* 滚动 */
+
+@mixin scroll {
+    overflow: scroll;
+    overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
+}
+
+$browser-default-font-size: 37.5px !default;
+
+/*html {
+    font-size: $browser-default-font-size;
+}*/
+
+@function pxTorem($px) {
+    //$px为需要转换的字号
+    @return $px / $browser-default-font-size * 1rem;
+}
+
+//SCSS
+html {
+    font-size: $browser-default-font-size;
+}

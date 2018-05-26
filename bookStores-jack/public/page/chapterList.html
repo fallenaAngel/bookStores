@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>章节列表</title>
+    <script src="../js/libs/flexible.js"></script>
+    <link rel="stylesheet" href="../css/chapterList.css">
+</head>
+<body>
+    <div class="wrap">
+        <header id="header"></header>
+        <div id="con">
+<ul class="chapter_list"></ul>
+        </div>
+        <script type="text/x-handlebars-template" id="chapter_list_render">
+            {{#each this}}
+                <li>{{title}}</li>
+            {{/each}}
+        </script>
+    </div>
+</body>
+</html>
+<script src="../js/libs/require.js"></script>
+<script>
+    require(["../js/main.js"],function () {  
+        require(["chapterList"]);
+    });
+</script>

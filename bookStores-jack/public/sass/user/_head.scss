@@ -1,0 +1,139 @@
+@import "../common/common.scss";
+@import "../common/_config.scss";
+header{
+	height: pxTorem(44px);
+	background: $header-bg;
+	border-bottom: 1px solid $border-color;
+	position: relative;
+    /*index*/
+    span.icon-sign{
+    	position: absolute;
+	    left: 0;
+	    top: 0;
+	    width: pxTorem(44px);
+	    height: pxTorem(44px);
+	    background: url("../../images/icon-sign.png") center no-repeat;
+	    background-size: pxTorem(22px);
+    }
+    div.swiper-tab{
+		width: pxTorem(195px);
+		margin: 0 auto;
+		height: 100%;
+		line-height: pxTorem(44px);
+		position: relative;
+    	span.tab_item{
+    		width: 50%;
+    		float: left;
+		    text-align: center;
+		    color: $black-color;
+			font-size: pxTorem($fz14);
+			&.head_tab_color{
+				    color: $tab-active-color;
+			}
+		}
+		i.head_line{
+			width: pxTorem(94px);
+			transform: translate3d(0px, 0px, 0px);
+			transition-duration: 0s;
+			bottom: -1px;
+			position: absolute;
+			left: 0;
+			transition:transform .3s ease-out;
+			&::after{
+				clear: both;
+				content: '.';
+				display: block;
+				height:pxTorem(2px);
+				width: pxTorem(34px);
+				margin: 0 auto;
+				background: $header-line-bg;
+			}
+			&.head_line_active{
+				transform: translateX(pxTorem(94px));
+			}
+		}
+    }
+    span.icon-person{
+    	position: absolute;
+	    right: 0px;
+	    top: 0px;
+	    width: pxTorem(44px);
+	    height: pxTorem(44px);
+	    background: url("../../images/icon-person.png") no-repeat center;
+	    background-size: pxTorem(16px);
+    }
+
+    /*search*/
+    span.icon-back{
+        float: left;
+        width: pxTorem(42px);
+        height: pxTorem(44px);
+        color: $black-color;
+		text-decoration: none;
+		&::before{
+			content: '';
+			display: block;
+			margin: pxTorem(15px) 0 0 pxTorem(16px);
+			width: pxTorem(10px);
+			height: pxTorem(16px);
+			background: url("../../images/icon-back.png") no-repeat;
+			background-size: pxTorem(10px) pxTorem(16px);
+		}
+	}
+	div.search-input{
+		width: 100%;
+		margin:pxTorem(5px) pxTorem(30px) pxTorem(5px) pxTorem(42px);
+		height: pxTorem(34px);
+		box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+		position: absolute;
+		top: 0;
+		left: 0;
+		b.icon-search{
+			    position: absolute;
+			    left: 0;
+			    top: 0;
+			    width: pxTorem(36px);
+			    height:pxTorem(35px);
+			    border-right: 1px solid rgba(0, 0, 0, 0.1);
+			    background: url("../../images/icon-search.png") no-repeat center;
+			    background-size: pxTorem(16px) pxTorem(16px);
+		}
+		input{
+			width: 75%;
+			height: 100%;
+			border: none;
+			box-sizing: border-box;
+			display: inline-block;
+			padding: pxTorem(8px) pxTorem(0px) pxTorem(8px) pxTorem(42px);
+			font-size: pxTorem(14px);
+			color: rgba(0, 0, 0, 0.8);
+			background: #fff;
+		}
+		div.search-btn{
+			width: pxTorem(40px);
+			display: inline-block;
+			text-align: center;
+			line-height: pxTorem(36px);
+			border-left: 1px solid $border-color;
+			font-size: pxTorem(14px);
+			color: $gray-color;
+			background: #fff;
+			position: relative;
+			left: pxTorem(-5px);
+		}
+	}
+
+	/*其他*/
+	span.title{
+		line-height: pxTorem(44px);
+		display: inline-block;
+		font-size: pxTorem(14px);
+	}
+	span.icon-home{
+		float: right;
+		width: pxTorem(44px);
+		height: pxTorem(44px);
+		background:url("../../images/icon-home.png") no-repeat center;
+		background-size: pxTorem(16px);
+	}
+}

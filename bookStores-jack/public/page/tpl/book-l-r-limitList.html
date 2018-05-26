@@ -1,0 +1,22 @@
+<script type="text/x-handlebars-template" id="l-r-limit-tpl">
+    {{#each this}} {{#if (limit2 @index)}}
+    <li class="bookCity-l-r-list">
+        <dl>
+            <dt>
+                <img src={{cover}} alt="">
+            </dt>
+            <dd>
+                <p class="book-h5__title">{{title}}</p>
+                <p class="book-h5__author">
+                    <span class="author">{{authors}}</span>
+                </p>
+                <p class="book-h5__summary">{{summary}}</p>
+                <div class="book-h5__wrap">
+                    {{#each tags}}
+                    <div class="book-h5__tag">{{this}}</div>
+                    {{/each}}
+            </dd>
+        </dl>
+    </li>
+    {{/if}} {{/each}}
+</script>

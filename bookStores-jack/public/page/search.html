@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>书城-搜索</title>
+    <script type="text/javascript" src="../js/libs/flexible.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/search.css">
+</head>
+<body>
+	<div class="wrap">
+		<!-- 头部用共用的渲染 -->
+		<header id="header"></header>
+		<main>
+			<ul class="search_history_tag"></ul>
+			<script type="text/x-handlebars-template" id="search_history_tag_render">
+				{{#each this}}
+					<li>{{this}}</li>
+				{{/each}}	
+			</script>
+			<ul class="search_list"></ul>
+		</main>
+	</div>
+</body>
+</html>
+<script src="../js/libs/require.js"></script>
+<script>
+	require(["../js/main.js"],function () {  
+		require(["search"]);
+	});
+</script>

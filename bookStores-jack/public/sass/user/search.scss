@@ -1,0 +1,37 @@
+@import "../common/common.scss";
+@import "./_head.scss";
+@import "./bookLRStyle.scss";
+div.wrap{
+    display: flex;
+    flex-direction: column;
+}
+main{
+    flex: 1;
+    overflow: hidden;
+    ul.search_history_tag{
+        @include num(100%,auto);
+        padding: pxTorem(10px);
+        li{
+            padding: pxTorem(5px) pxTorem(8px);
+            background: rgb(231, 184, 229);
+            font-size: pxTorem(14px);
+            margin: pxTorem(4px) pxTorem(8px);
+            white-space: nowrap;
+            display: inline-block;
+            &:nth-child(2n){
+                background: rgb(196, 214, 163);
+            }
+            &:nth-child(3n) {
+                background: rgb(163, 210, 214);
+            }
+        }
+    }
+    ul.search_list{
+        @include num(100%,100%);
+        overflow-y:scroll;
+        li{
+            line-height: pxTorem(30px);
+            text-align: center;
+        }
+    }
+}

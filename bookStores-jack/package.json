@@ -11,5 +11,11 @@
     "stores"
   ],
   "author": "jack",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies":{
+
+  },
+  "denpendencies":{
+    
+  }
 }

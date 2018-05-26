@@ -1,0 +1,207 @@
+@import "../common/common.scss";
+@import "../common/_config.scss";
+
+.none {
+    display: none;
+}
+.wrap {
+    width: 100%;
+    height: 100%;
+    .artical-con {
+        width: 100%;
+        height: 100%;
+        overflow: scroll;
+        background-color: $article-bg1;
+        h1 {
+            margin: 0 pxTorem(16px);
+            font-size: pxTorem(18px);
+            color: $title-color;
+            font-weight: bold;
+            border-bottom: pxTorem(1px) solid $title-color;
+            line-height: 3;
+            margin-bottom: pxTorem(10px);
+        }
+        p {
+            padding: 0 pxTorem(16px);
+            color: $artical-color;
+            font-size: pxTorem(14px);
+            line-height: 1.5;
+            text-indent: 2em;
+        }
+    }
+}
+.set-wrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    &>div {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .set-t {
+            width: 100%;
+            height: pxTorem(44px);
+            line-height: pxTorem(44px);
+            background-color: rgba(0, 0, 0, .9);
+            span {
+                color: $write-color;
+                font-size: pxTorem(14px);
+                background: url("../../images/icon-circle-back.png") no-repeat pxTorem(15px) center;
+                background-size: pxTorem(18px);
+                padding-left: pxTorem(44px);
+            }
+        }
+        .mask {
+            width: 100%;
+            flex: 1;
+        }
+        .set-b {
+            width: 100%;
+            box-sizing: border-box;
+            background-color: rgba(0, 0, 0, .9);
+            color: $write-color;
+            .chapter-btns {
+                display: flex;
+                justify-content: space-between;
+                line-height: pxTorem(44px);
+                border-bottom: pxTorem(1px) solid $write-color;
+                span {
+                    flex: 1;
+                    text-align: center;
+                    color: $write-color;
+                    font-size: pxTorem(12px);
+                }
+            }
+            .style-btns {
+                width: 100%;
+                display: flex;
+                padding: pxTorem(15px) 0;
+                dl {
+                    flex: 1;
+                    text-align: center;
+                    dt {
+                        width: pxTorem(30px);
+                        height: pxTorem(30px);
+                        margin: 0 auto;
+                        background: url("../../images/icon-chapter.png") no-repeat center center;
+                    }
+                    &.size {
+                        dt {
+                            background: url("../../images/icon-font.png") no-repeat center center;
+                        }
+                        &.active {
+                            dt {
+                                background: url("../../images/icon-font-active.png") no-repeat center center;
+                            }
+                        }
+                    }
+                    &.day {
+                        dt {
+                            background: url("../../images/icon-night.png") no-repeat center center;
+                        }
+                        &.light {
+                            dt {
+                                background: url("../../images/icon-light.png") no-repeat center center;
+                            }
+                        }
+                    }
+                    &.down {
+                        dt {
+                            background: url("../../images/icon-down.png") no-repeat center center;
+                        }
+                    }
+                    dd {
+                        font-size: pxTorem(12px);
+                        color: $write-color;
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
+        .set-panel {
+            width: 100%;
+            background-color: rgba(0, 0, 0, .9);
+            position: absolute;
+            bottom: pxTorem(87px);
+            left: 0;
+            z-index: 2;
+            .set-font {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                padding: pxTorem(20px) 0;
+                span {
+                    width: pxTorem(60px);
+                    color: $write-color;
+                    font-size: pxTorem(14px);
+                    align-items: center;
+                }
+                &>div {
+                    flex: 1;
+                    button {
+                        background-color: transparent;
+                        font-size: pxTorem(14px);
+                        color: $write-color;
+                        outline: none;
+                        border: pxTorem(1px) solid $write-color;
+                        margin-right: pxTorem(10px);
+                        padding: pxTorem(4px) pxTorem(50px);
+                        border-radius: pxTorem(20px);
+                    }
+                }
+            }
+            .set-bg {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                span {
+                    width: pxTorem(60px);
+                    color: $write-color;
+                    font-size: pxTorem(14px);
+                    align-items: center;
+                }
+                li {
+                    display: inline-block;
+                    width: pxTorem(30px);
+                    height: pxTorem(30px);
+                    border-radius: 50%;
+                    border-color: $article-bg1;
+                    margin-right: pxTorem(10px);
+                    position: relative;
+                    &:nth-child(1) {
+                        background-color: $article-bg1;
+                    }
+                    &:nth-child(2) {
+                        background-color: $article-bg2;
+                    }
+                    &:nth-child(3) {
+                        background-color: $article-bg3;
+                    }
+                    &:nth-child(4) {
+                        background-color: $article-bg4;
+                    }
+                    &:nth-child(5) {
+                        background-color: $article-bg5;
+                    }
+                    &:nth-child(6) {
+                        background-color: $article-bg6;
+                    }
+                    &.active:before {
+                        content: '';
+                        width: pxTorem(34px);
+                        height: pxTorem(34px);
+                        border-radius: 50%;
+                        border: pxTorem(1px) solid $btn-orange-border;
+                        position: absolute;
+                        top: pxTorem(-3px);
+                        left: pxTorem(-2.8px);
+                    }
+                }
+            }
+        }
+    }
+}
