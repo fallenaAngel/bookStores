@@ -1,7 +1,7 @@
 ﻿# 书城bookStores
 
  ## 技术栈
- -gulp创建本地服务，handlebars模板实现视图更新，commonJS规范，requireJS实现模块依赖，jQuery操作dom，bscroll实现滚动回弹，lazyload实现懒加载，面向对象实现模块划分
+ > * gulp创建本地服务，handlebars模板实现视图更新，commonJS规范，requireJS实现模块依赖，jQuery操作dom，bscroll实现滚动回弹，lazyload实现懒加载，面向对象实现模块划分
 ## 实现的功能
  -首页的tab切换，
  -index页面的自动轮播图及上拉加载更多，下拉刷新功能，
