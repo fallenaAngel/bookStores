@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../js/libs/flexible.js"></script>
+    <link rel="stylesheet" href="../css/detail.css">
+</head>
+
+<body>
+    <div class="wrap none">
+        <header id="header"></header>
+        <main>
+            <div id="detail_top"></div>
+            <script type="text/x-handlebars-template" id="detail_lR_list_render">
+                {{#each this}}
+                <section id="detail_lR_list">
+                    <div class="u-book">
+                        <div class="book-cover">
+                            <img src="{{cover}}">
+                            <div class="u-tagRT"></div>
+                        </div>
+                        <div class="info">
+                            <h3 class="title">{{title}}</h3>
+                            <p class="author">
+                                <span class="author">{{authors}}</span>
+                            </p>
+                            <div class="u-grade">
+                                <div class="grade"></div>
+                                <span class="read">{{score_count}}个评价</span>
+                            </div>
+                            <p class="price">价格：5书币/千字</p>
+                            <p class="count">字数：{{wordNum word_count}}万字
+                                <span class="u-booktag">{{#if finish}}完结{{else}}连载中{{/if}}</span>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section class="detail_book_btn">
+                    <div class="book-dash">
+                        <button class="startRead_btn">开始阅读</button>
+                        <button class="downLoad_btn">下载</button>
+                    </div>
+                    <div class="u-folder">
+                        <div class="folder-cnt">{{content}}</div>
+                        <div id="folder-tail">最新：{{latest}} 更新于 16小时前</div>
+                    </div>
+                </section>
+                <section class="detail_book_tag">
+                    <h3>类别标签</h3>
+                    <ul class="m-tag">
+                        {{#each tags}}
+                        <li class="u-tag">{{this}}</li>
+                        {{/each}}
+                    </ul>
+                </section>
+                {{/each}}
+            </script>
+            
+            <section class="detail_book_otherBook">
+                <h1>作者其它图书</h1>
+                <div class="cnt">
+                    <div class="book-table" id="detail_book_otherBook_list"></div>
+                </div>
+            </section>
+            <section class="detail_book_info">
+                    <h1>图书信息</h1>
+                    <h2>版权：阅文集团旗下起点中文网</h2>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
+<script src="../js/libs/require.js"></script>
+<script>
+    require(["../js/main.js"], function () {
+        require(["detail"]);
+    })
+</script>

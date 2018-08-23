@@ -1,0 +1,21 @@
+@import "../common/common.scss";
+@import "./_head.scss";
+div.wrap{
+    display: flex;
+    flex-direction: column;
+}
+div#con{
+    overflow: hidden;
+    ul.chapter_list {
+        @include num(100%, auto);
+        li {
+            line-height: 2.8em;
+            padding: 0 pxTorem(14px);
+            border-bottom: pxTorem(1px) solid #EEE;
+            font-size: pxTorem(14px);
+            &.active {
+                color: #F35D02;
+            }
+        }
+    }
+}

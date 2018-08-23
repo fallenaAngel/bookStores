@@ -1,0 +1,71 @@
+@import "../common/common.scss";
+@import "../common/_config.scss";
+li.bookCity-l-r-list {
+    padding: pxTorem(15px) 0;
+    border-bottom: pxTorem(1px) solid $line-border;
+    height: auto;
+    dl {
+        @include num(100%, auto);
+        display: flex;
+        dt {
+            flex: 3;
+            img {
+                @include num(pxTorem(85px), pxTorem(113px));
+                display: block;
+            }
+        }
+        dd {
+            flex: 7;
+            .book-h5__title {
+                margin-bottom: pxTorem(4px);
+                font-size: pxTorem(16px);
+                color: rgba(0, 0, 0, 0.9);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                line-height: pxTorem(20px);
+            }
+            .book-h5__author {
+                margin-top: pxTorem(8px);
+                font-size: pxTorem(12px);
+                color: rgba(0, 0, 0, 0.7);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                line-height: pxTorem(14px);
+            }
+            .book-h5__summary {
+                display: -webkit-box;
+                margin: pxTorem(8px) 0 0;
+                height: 2.8em;
+                font-size: pxTorem(12px);
+                color: rgba(0, 0, 0, 0.6);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                line-clamp: 2;
+                box-orient: vertical;
+                line-height: pxTorem(16px);
+            }
+            .book-h5__wrap {
+                margin-top: pxTorem(10px);
+                padding-top: pxTorem(3px);
+                overflow: hidden;
+                line-height: pxTorem(20px);
+                .book-h5__tag {
+                    float: left;
+                    margin: pxTorem(-3px) pxTorem(7px) 0 0;
+                    padding: pxTorem(3px) pxTorem(6px) pxTorem(2px);
+                    max-width: 6em;
+                    font-size: pxTorem(11px);
+                    color: #53ac7d;
+                    border-radius: pxTorem(3px);
+                    border: 1px solid #53ac7d;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    line-height: pxTorem(20px);
+                }
+            }
+        }
+    }
+}

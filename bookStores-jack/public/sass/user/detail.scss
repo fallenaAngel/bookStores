@@ -1,0 +1,212 @@
+@import "../common/common.scss";
+@import "./_head.scss";
+div.wrap {
+    display: flex;
+    flex-direction: column;
+}
+.none{
+    display: none;
+}
+main {
+    flex: 1;
+    overflow-y: scroll;
+}
+
+section#detail_lR_list {
+    @include num(100%, auto);
+    background: #fff;
+    div.u-book {
+        padding: pxTorem(30px) pxTorem(20px) pxTorem(30px) pxTorem(30px);
+        display: flex;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+        div.book-cover {
+            flex: 4;
+            img {
+                @include num(70%, auto);
+                display: block;
+            }
+        }
+        div.info {
+            flex: 6;
+            padding-left: pxTorem(15px);
+            h3.title {
+                margin-bottom: pxTorem(7px);
+                font-size: pxTorem(16px);
+                overflow: hidden;
+                font-weight: 400;
+                color: #000;
+            }
+            p.author {
+                line-height: 1.4;
+                margin-top: pxTorem(4px);
+                span.author {
+                    display: inline-block;
+                    margin-right: pxTorem(5px);
+                    color: #4b99a7;
+                    font-size: pxTorem(14px);
+                }
+            }
+            div.u-grade {
+                margin: pxTorem(5px) 0 pxTorem(6px) 0;
+                div.grade {
+                    display: inline-block;
+                    @include num(pxTorem(80px), pxTorem(12px));
+                    background: url("../../images/8lqyfBwW.png") no-repeat;
+                    background-position: 0 pxTorem(-83px);
+                    background-size: pxTorem(70px) pxTorem(179px);
+                    position: relative;
+                    top: pxTorem(4px);
+                }
+            }
+            div.price {
+                color: #727272;
+                font-size: pxTorem(12px);
+                margin-top: pxTorem(5px);
+            }
+            p.count {
+                color: #6e6e6e;
+                font-size: pxTorem(12px);
+                margin: pxTorem(5px) 0;
+                span.u-booktag {
+                    color: #63bd6e;
+                    border-color: #63bd6e;
+                    border: 1px solid #00a0e9;
+                    border-radius: pxTorem(4px);
+                    font-size: pxTorem(12px);
+                    line-height: pxTorem(16px);
+                    display: inline-block;
+                    padding: 0 pxTorem(2px);
+                }
+            }
+        }
+    }
+}
+
+section.detail_book_btn {
+    div.book-dash {
+        padding: 0 pxTorem(14px);
+        margin-bottom: pxTorem(20px);
+        button.startRead_btn {
+            @include num(48%,
+            pxTorem(40px));
+            background: #f35d02;
+            border: 1px solid #e35109;
+            color: #fff;
+            text-align: center;
+            line-height: pxTorem(40px);
+            margin-right: 1%;
+            font-size: pxTorem(14px);
+        }
+        button.downLoad_btn {
+            @include num(48%,
+            pxTorem(40px));
+            background: #fff;
+            border: pxTorem(1px) solid #ddd;
+            color: #000;
+            text-align: center;
+            line-height: pxTorem(40px);
+            font-size: pxTorem(14px);
+        }
+    }
+    div.u-folder {
+        div.folder-cnt {
+            display: -webkit-box;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            position: relative;
+            line-height: 1.6;
+            padding: 0 pxTorem(14px);
+            margin-bottom: pxTorem(10px);
+            font-size: pxTorem(14px);
+            color: #585858;
+        }
+        div#folder-tail {
+            text-align: center;
+            font-size: pxTorem(14px);
+            border-top: pxTorem(1px) solid #f0f0f0;
+            color: #8d8d8d;
+            padding: pxTorem(10px) pxTorem(14px);
+        }
+    }
+}
+
+section.detail_book_tag {
+    border-bottom: pxTorem(10px) solid #f5f5f5;
+    border-top: pxTorem(10px) solid #f5f5f5;
+    >h3 {
+        font-size: pxTorem(14px);
+        font-weight: normal;
+        color: #666;
+        padding: pxTorem(10px) pxTorem(14px) pxTorem(5px);
+    }
+    ul.m-tag {
+        line-height: 1.6;
+        padding: 0 pxTorem(14px);
+        margin-bottom: pxTorem(10px);
+        font-size: pxTorem(14px);
+        color: #585858;
+        li.u-tag {
+            display: inline-block;
+            width: auto;
+            line-height: 1.8em;
+            padding: 0 pxTorem(20px);
+            color: #766d5d;
+            border-radius: pxTorem(4px);
+            background: #bbccda;
+            font-size: pxTorem(14px);
+            text-align: center;
+            border: 1px solid #d3d3d3;
+        }
+    }
+}
+
+section.detail_book_otherBook {
+    >h1 {
+        padding: pxTorem(15px) pxTorem(14px) pxTorem(8px) pxTorem(14px);
+        font-size: pxTorem(14px);
+        color: #8d8d8d;
+    }
+    div.book-table {
+        display: flex;
+        dl {
+            @include num(33%,
+            pxTorem(139px));
+            margin: pxTorem(10px) 0 pxTorem(15px);
+            dt {
+                @include num(100%,
+                pxTorem(114px));
+                margin: 0 0 pxTorem(4px) 0;
+                img {
+                    @include num(auto,
+                    100%);
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+            dd {
+                line-height: 1.4em;
+                text-align: center;
+                font-size: pxTorem($fz14);
+                color: #8d8d8d;
+            }
+        }
+    }
+}
+
+section.detail_book_info {
+    h1 {
+        padding: pxTorem(15px) pxTorem(14px) pxTorem(8px) pxTorem(14px);
+        font-size: pxTorem(15px);
+        color: #8d8d8d;
+    }
+    h2 {
+        padding: 0 pxTorem(14px) pxTorem(12px) pxTorem(14px);
+        color: #8d8d8d;
+        line-height: 1.6;
+        font-size: pxTorem(14px);
+    }
+}

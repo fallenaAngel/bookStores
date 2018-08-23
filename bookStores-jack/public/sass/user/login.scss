@@ -1,0 +1,44 @@
+@import "../common/common.scss";
+html,body,div.wrap{
+    @include num(100%,100%);
+    overflow: hidden;
+}
+div.login{
+    @include num(100%,pxTorem(200px));
+    margin-top: pxTorem(100px);
+    h2{
+        @include num(100%, pxTorem(50px));
+        display: block;
+        margin: pxTorem(10px) auto;
+        text-align: center;
+        line-height: pxTorem(50px);
+        font-size: pxTorem(25px);
+        color: orange;
+        text-shadow: pxTorem(1px) pxTorem(1px) pxTorem(1px) rgb(248, 252, 197);
+    }
+    input{
+        @include num(70%, pxTorem(40px));
+        display: block;
+        margin: pxTorem(10px) auto;
+         text-align: left;
+         text-indent: 2em;
+         line-height: pxTorem(40px);
+         font-size: pxTorem(16px);
+         background: #fff;
+         &::placeholder{
+             color: #999;
+         }
+    }
+    div#login_btn {
+        @include num(70%, pxTorem(40px));
+        display: block;
+        margin: pxTorem(10px) auto;
+        text-align: center;
+        line-height: pxTorem(40px);
+        font-size: pxTorem(16px);
+        background: orange;
+        color: #fff;
+        box-shadow: pxTorem(1px) pxTorem(1px) pxTorem(1px) rgb(248, 252, 197),
+        pxTorem(1px) pxTorem(1px) pxTorem(1px) rgb(248, 252, 197);
+    }
+}

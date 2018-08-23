@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>书城-jack-首页</title>
+	<script type="text/javascript" src="./js/libs/flexible.js"></script>
+	<link rel="stylesheet" href="./sass/common/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
+</head>
+
+<body>
+	<div class="wrap">
+		<header>
+			<span class="icon-sign"></span>
+			<div class="swiper-tab">
+				<span class="tab_item head_tab_color">书城</span>
+				<span class="tab_item">书架</span>
+				<i class="head_line"></i>
+			</div>
+			<span class="icon-person" id="login_btn"></span>
+		</header>
+		<div class="swiper-container" id="content">
+			<div class="swiper-wrapper swiper-no-swiping">
+				<div class="swiper-slide" id="book_city">
+					<ul data-up="上拉加载更多。。。" data-down="下拉刷新。。。">
+						<li class="con_top">
+							<div class="con_top_search">
+								<a class="con_top_search_left" href="../page/search.html">输入书名/作者/关键字</a>
+							</div>
+						</li>
+						<li class="swiper-container city_banner">
+							<div class="swiper-wrapper"></div>
+							<script type="text/x-handlebars-template" id="city_banner_render">
+								{{#each data}}
+								<div class="swiper-slide swiper-no-swiping">
+									<img src="{{ad_pic_url}}">
+								</div>
+								{{/each}}
+							</script>
+						</li>
+						<li class="con_nav">
+							<script type="text/x-handlebars-template" id="city_nav_render">
+								{{#each this}}
+								<dl>
+									<dt>
+										<img src="{{ad_pic_url}}" alt="">
+									</dt>
+									<dd>{{ad_name}}</dd>
+								</dl>
+								{{/each}}
+							</script>
+						</li>
+						<li class="sec Secblock">
+							<section class="block">
+								<div class="block_title"></div>
+								<script type="text/x-handlebars-template" id="city_con_tit">
+									<h2>{{this}}</h2>
+								</script>
+								<div class="block_content"></div>
+								<a href="#">查看更多</a>
+							</section>
+						</li>
+						<li class="con_recommend  Secblock">
+							<!-- 重磅推荐 -->
+							<section class="block">
+								<div class="con_recommend_title">
+									<!-- 标题用handlebars渲染 -->
+									<script type="text/x-handlebars-template" id="con_recommend_title_render">
+										<p class="con_recommend_title_left">{{this}}
+											<i>推</i>
+										</p>
+									</script>
+									<!--  -->
+									<div class="con_recommend_title_tab">
+										<a href="#">男</a>
+										<a href="#">女</a>
+									</div>
+								</div>
+								<div class="con_recommend_content">
+									<div class="con">
+										<ol class="con_recommend_content_list">
+											<li id="con_recommend_content_list_first_item"></li>
+											<script type="text/x-handlebars-template" id="con_recommend_content_list_render">
+												{{#each this}} {{#if (limit @index)}}
+												<li>
+													<div class="book-h5 book-h5_no-img">
+														<span class="book-h5_no-img__order">0{{addIndex2 @index}}</span>
+														<div class="book-h5_no-img__info">
+															<p class="book-h5_no-img__title">{{title}}
+																<i class="book-h5_no-img__author">
+																	<span class="author">{{authors}}</span>
+																</i>
+															</p>
+														</div>
+													</div>
+												</li>
+												{{/if}} {{/each}}
+											</script>
+										</ol>
+									</div>
+									<div class="con_tag">
+										<a href="#">换一换</a>
+										<a href="#">查看全部</a>
+									</div>
+								</div>
+							</section>
+						</li>
+						<li class="classify  Secblock">
+							<section class="block">
+								<div class="con_classify_title">
+									<p>女生最爱</p>
+								</div>
+								<div class="con_classify_content">
+									<ul class="con_classify_list_render"></ul>
+								</div>
+								<div class="con_tag">
+									<a href="#">换一换</a>
+									<a href="#">查看全部</a>
+								</div>
+							</section>
+						</li>
+						<li class="classify  Secblock">
+							<section class="block">
+								<div class="con_classify_title">
+									<p>男生最爱</p>
+								</div>
+								<div class="con_classify_content">
+									<ul class="con_classify_list_render"></ul>
+								</div>
+								<div class="con_tag">
+									<a href="#">换一换</a>
+									<a href="#">查看全部</a>
+								</div>
+							</section>
+						</li>
+						<li>限时免费</li>
+						<li>专题特推</li>
+						<li class="loadMore">
+							<ol class="con_loadMore_list_render"></ol>
+						</li>
+					</ul>
+				</div>
+
+
+				
+				<div class="swiper-slide" id="book_rack">
+					<div class="book_rack_header">
+						<div class="con_top">
+							<div class="con_top_search">
+								<a class="con_top_search_right" href="../page/search.html">输入书名/作者/关键字</a>
+								<div class="con_top_search_switch_lr" id="con_top_switch_btn"></div>
+							</div>
+						</div>
+					</div>
+					<ul class="book_rack_con_list_render">
+						
+						<script type="text/x-handlebars-template" id="book_rack_content_list_render">
+							{{#each items}}
+								<li>
+									<div class="u-book">
+										<div class="book-cover">
+											<img src="{{cover}}">
+											<div class="u-tagRT"></div>
+										</div>
+										<div class="info">
+											<h3 class="title">{{title}}</h3>
+											<p class="author">
+												<span class="author">{{authors}}</span>
+											</p>
+											<p class="extra">已读: 第6章 你也要打电话？</p>
+											<div class="wrap">
+												<p class="extra">{{latest}}</p>
+											</div>
+										</div>
+									</div>
+								</li>
+							{{/each}}
+						</script>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
+<script type="text/javascript" src="./js/libs/require.js"></script>
+<script type="text/javascript">
+	require(["./js/main.js"], function () {
+		require(["index"])
+	});
+</script>
