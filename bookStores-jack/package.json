@@ -1,9 +1,10 @@
 {
   "name": "bookstores-jack",
   "version": "1.0.0",
-  "description": "this is lesson-3 practice",
+  "description": "this is a store about book",
   "main": "gulpfile.js",
   "scripts": {
+    "start": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -12,10 +13,13 @@
   ],
   "author": "jack",
   "license": "ISC",
-  "devDependencies":{
-
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-webserver": "^0.9.1",
+    "querystring": "^0.2.0"
   },
-  "denpendencies":{
-    
-  }
+  "denpendencies": {}
 }
